@@ -2,14 +2,14 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
-app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname,'student-productivity')));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname,'student-productivity','index.html'));
 });
 
-app.listen(port, () => {
-    console.log(`Backend is working! View your app at http://localhost:${port}`);
+app.listen(port, '0.0.0.0',() => {
+    console.log(`Server running on port ${port}`);
 });
