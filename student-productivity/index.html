@@ -1,0 +1,137 @@
+<!-- <html lang="en">
+    <head>
+        <meta charset ="UTF-8">
+        <title>Student Productivity</title>
+        <link rel="stylesheet"href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    </head>
+    
+    <body class="bg-light">
+        
+      
+            <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                
+                <div class="text-center mb-4">
+                    <h1 class="display-5 fw-bold text-primary">Today's Goals</h1>
+                    <p class="text-muted">Stay productive and organized.</p>
+                </div>
+
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <div class="input-group">
+                            <input type="text" id="task" class="form-control form-control-lg" placeholder="Enter your task here..." aria-label="Task input">
+                            <button class="btn btn-primary px-4" type="button" id="addtask">
+                                <i class="bi bi-plus-lg"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center gap-2 mb-4" id="filters">
+                    <button id="all" class="btn btn-outline-secondary btn-sm rounded-pill px-3 active">All</button>
+                    <button id="completed" class="btn btn-outline-success btn-sm rounded-pill px-3">Completed</button>
+                    <button id="pending" class="btn btn-outline-warning btn-sm rounded-pill px-3">Pending</button>
+                </div>
+
+                <ul id="tasks" class="list-group shadow-sm">
+                    </ul>
+
+            </div>
+        </div>
+    </div>
+
+        </main>
+        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Productivity Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+                <i class="bi bi-mortarboard-fill me-2 text-primary"></i> StudyHub
+            </a>
+            <div class="d-flex align-items-center">
+                <span class="text-white-50 small me-3 d-none d-sm-inline">2026 Academic Year</span>
+                <button class="btn btn-primary btn-sm rounded-pill px-4">Dashboard</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-header text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-5 fw-bold mb-3">Organize Your Education</h1>
+            <p class="lead opacity-75">The ultimate student tool to manage classes, tasks, and deadlines in one place.</p>
+        </div>
+    </section>
+
+    <main class="container my-5">
+        <div class="row g-4">
+            
+            <div class="col-lg-4">
+                <div class="card border-0 shadow-sm p-4 sticky-lg-top" style="top: 100px; border-radius: 20px;">
+                    <h5 class="fw-bold mb-3">How it works</h5>
+                    <div class="d-flex mb-3">
+                        <i class="bi bi-1-circle-fill text-primary me-3 fs-4"></i>
+                        <p class="small mb-0"><strong>Input:</strong> Add your daily assignments or study goals instantly.</p>
+                    </div>
+                    <div class="d-flex mb-3">
+                        <i class="bi bi-2-circle-fill text-primary me-3 fs-4"></i>
+                        <p class="small mb-0"><strong>Filter:</strong> Sort by status to focus on what needs to be done next.</p>
+                    </div>
+                    <div class="d-flex mb-4">
+                        <i class="bi bi-3-circle-fill text-primary me-3 fs-4"></i>
+                        <p class="small mb-0"><strong>Succeed:</strong> Mark tasks complete and track your daily academic progress.</p>
+                    </div>
+                    <hr>
+                    <p class="text-muted extra-small">StudyHub helps over 20,000+ students stay on track every single day.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-8">
+                <div class="card border-0 shadow-sm mb-4" style="border-radius: 20px;">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold mb-4">Current Goals</h4>
+                        
+                        <div class="input-group mb-4 shadow-sm rounded">
+                            <input type="text" id="task" class="form-control border-0 py-3 ps-4" placeholder="e.g. Study Chemistry Chapter 4..." style="background: #f8f9fa;">
+                            <button class="btn btn-primary px-4 fw-bold" type="button" id="addtask">Add Goal</button>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="btn-group" id="filters">
+                                <button id="all" class="btn btn-sm btn-outline-dark rounded-pill me-2 active">All</button>
+                                <button id="completed" class="btn btn-sm btn-outline-dark rounded-pill me-2">Completed</button>
+                                <button id="pending" class="btn btn-sm btn-outline-dark rounded-pill">Pending</button>
+                            </div>
+                        </div>
+
+                        <ul id="tasks" class="list-group list-group-flush mt-3">
+                            </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
